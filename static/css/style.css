@@ -1,0 +1,11 @@
+:root {
+    --nav-gradient: linear-gradient(#396e4e,#6cd8ff);
+}
+
+.offcanvas {
+    background-image: var(--nav-gradient);
+}
+
+.navbar {
+    background-image: var(--nav-gradient);
+}
