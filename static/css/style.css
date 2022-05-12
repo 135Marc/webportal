@@ -9,3 +9,36 @@
 .navbar {
     background-image: var(--nav-gradient);
 }
+
+
+
+@media only screen and (max-width: 768px) {
+    /* FOR MOBILES */
+    .carousel{
+        width: 100vw;
+        height: 25vh;
+    }
+    h2 {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* FOR DESKTOP */
+    .carousel{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30vw;
+        height: 25vh;
+    }
+    
+    h2 {
+        text-align: center;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+}

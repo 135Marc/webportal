@@ -1,105 +1,30 @@
-{% from 'bootstrap5/utils.html' import render_icon %}
-<!DOCTYPE html>
-{% block html %}
-<html lang="en">
-    {% block head %}  
-    <head>
-          {% block metas %}
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-          {% endblock %}
+{% extends 'base.html' %}
+{{ super() }}
 
-          {% block styles %} {{ bootstrap.load_css() }} <!-- Bootstrap CSS --> {% endblock %}
+{% block content%}
+  <h2> Welcome To the Subjective Audio Evaluation Tool! </h2>
 
-          {% block title %} <title> SAET - Subjective Audio Evaluation Tool</title> {% endblock %}
-          <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css',_external=True)}}" type="text/css">
-    </head>
-    {% endblock %}
-    
-    {% block body %}
-    
-    <body>
-        
-      {% block navbar %}
-        
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">          
-              <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-              {{ render_icon('music-note')}}
-              <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                Link with href
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ url_for('hello_world',_external=True)}}">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="{{ url_for('about_page',_external=True)}}">About</a>
-                  </li>
-                </ul>
-                </div>
-            </div>
-          </nav>
-
-          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body ">
-              <div class="row">
-                <div class="col-2">
-                  Home 
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-2">
-                  About 
-                </div>
-              </div>   
-              
-             
-            </div>
-          </div>
-
-        {% endblock %}
-        
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="{{ url_for('static',filename='imgs/girl-audio.jpg',_external=True)}}" class="d-block w-100" alt="..."> 
-            </div>
-            <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="{{ url_for('static',filename='imgs/girl-audio.jpg',_external=True)}}" class="d-block w-100" alt="..."> 
+    </div>
+    <div class="carousel-item">
+        <img src="{{ url_for('static',filename='imgs/audio-eq.jpg',_external=True)}}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+        <img src="{{ url_for('static',filename='imgs/guy-phones.jpg',_external=True)}}" class="d-block w-100" alt="...">
+    </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
 
-
-        {% block scripts %} {{ bootstrap.load_js() }} <!-- Optional JavaScript --> {% endblock %}
-
-    </body>
-    {% endblock %}
-</html>
-{% endblock%}
-
-<!-- Photo by <a href="https://unsplash.com/@kellysikkema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kelly Sikkema</a> on <a href="https://unsplash.com/s/photos/audio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-   On Unsplash-->
-
-   
+{% endblock %}
