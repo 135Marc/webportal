@@ -2,4 +2,34 @@
 {{ super() }}
 {% block content %}
 
+<!-- Author Area -->
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ url_for('static',filename='imgs/girl-audio.jpg',_external=True)}}" class="img-fluid rounded-circle" id ="about-circle" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">The Author</h5>
+          <p class="card-text">Ricardo Ponte aka Yuri Tarded</p>
+        </div>
+      </div>
+    </div>
+</div> 
+<!-- Orientator Area -->
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ url_for('static',filename='imgs/girl-audio.jpg',_external=True)}}" class="img-fluid rounded-circle" id ="about-circle" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">The Orientator</h5>
+          <p class="card-text">Bruno Miguel Fernandes Dias</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
 {% endblock %}
