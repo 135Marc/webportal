@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form,render_field%}
+{{ super() }}
+{% block content%}
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name() }}
+    {{ form.submit() }}
+
+</form>
+
+
+{% endblock %}

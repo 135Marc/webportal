@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {{ super() }}
-
 {% block content%}
   <h2> Welcome To the Subjective Audio Evaluation Tool! </h2>
 
+  <!-- CAROUSEL -->
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
     <div class="carousel-item active">
@@ -26,5 +26,30 @@
     </button>
 </div>
 
+
+<!-- CARDS -->
+
+<div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-1">
+        <img src="{{ url_for('static',filename='imgs/girl-audio.jpg',_external=True)}}" class="img-fluid rounded-circle" id ="about-circle" alt="...">
+      </div>
+      <div class="col-md-4">
+        <div class="card-body">
+          <h5 class="card-title">Supports Many Formats</h5>
+          <p class="card-text">This WebApp supports many (lossy) formats such as MP3....  </p>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <img src="{{ url_for('static',filename='imgs/girl-audio.jpg',_external=True)}}" class="img-fluid rounded-circle" id ="about-circle" alt="...">
+      </div>
+      <div class="col-md-4">
+        <div class="card-body">
+          <h5 class="card-title">Audio Analysis</h5>
+          <p class="card-text">Get data on your audio files such as bitrate, encoding scheme, compression mechanism (...) </p>
+        </div>
+      </div>
+    </div>
+</div> 
 
 {% endblock %}

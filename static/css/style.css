@@ -15,15 +15,25 @@
 @media only screen and (max-width: 768px) {
     /* FOR MOBILES */
     .carousel{
-        width: 100vw;
         height: 25vh;
     }
+
     h2 {
         margin-top: 2vh;
         margin-bottom: 2vh;
         font-size: 16px;
         text-align: center;
     }
+
+    .card {
+        margin-top: 7vh;
+        max-height: 10vh;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -46,4 +56,10 @@
         margin-top: 0.5vh;
         margin-bottom: 0.5vh;
     }
+
+    .card {
+        margin-top: 22vh;
+        max-height: 50vh;
+    }
+
 }
