@@ -3,7 +3,7 @@
 {{ super() }}
 {% block content%}
 
-<form method="POST">
+<form action="http://localhost:5000/analyzer" method="POST" enctype = "multipart/form-data">
     {{ form.hidden_tag() }}
     {{ form.name.label }} {{ form.name() }}
     {{ form.submit() }}
